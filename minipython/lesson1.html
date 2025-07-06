@@ -6,8 +6,8 @@
     <title>Урок 1. М1 У1. Введение в язык Python</title>
     <style>
         :root {
-            --primary: #3776ab;
-            --secondary: #ffd43b;
+            --primary: #000000;
+            --secondary: #a505fc;
             --dark: #1e1e1e;
             --light: #f8f9fa;
             --success: #28a745;
@@ -17,23 +17,25 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
+            color: var(--light);
+            background-color: var(--dark);
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
         
         h1 {
-            color: var(--primary);
+            color: var(--light);
+            background-color: rgba(0, 0, 0, 0.25);
+            padding: 5px;
             border-bottom: 3px solid var(--secondary);
             padding-bottom: 10px;
             margin-top: 0;
         }
         
         h2 {
-            color: var(--primary);
-            background-color: rgba(55, 118, 171, 0.1);
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.25);
             padding: 10px 15px;
             border-radius: 5px;
             margin-top: 30px;
@@ -41,10 +43,11 @@
         
         p {
             margin: 15px 0;
+            color: white;
         }
         
         b {
-            color: var(--primary);
+            color: white;
         }
         
         .code-container {
@@ -56,12 +59,13 @@
             display: block;
             background-color: #000000;
             padding: 15px;
-            text: #ffffff;
+            color: #ffffff;
             border-radius: 5px;
             font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
             overflow-x: auto;
             border-left: 4px solid var(--primary);
             margin-top: 0;
+            white-space: pre;
         }
         
         .copy-btn {
@@ -84,17 +88,19 @@
         }
         
         .copy-btn.copied {
-            background-color: var(--success);
+            background-color: #a505fc;
             opacity: 1;
         }
         
         input[type="checkbox"] {
             margin-right: 10px;
-            accent-color: var(--primary);
+            accent-color: #a505fc;
+            background-color: #a505fc;
         }
         
         .task {
-            background-color: white;
+            background-color: rgba(0,0,0,0.25);
+            color: white;
             border-radius: 8px;
             padding: 15px 20px;
             margin: 15px 0;
@@ -103,7 +109,7 @@
         
         .task-title {
             font-weight: bold;
-            color: var(--primary);
+            color: white;
             margin-bottom: 10px;
             display: flex;
             align-items: center;
@@ -137,7 +143,7 @@
 <body>
     <div class="header">
         <h1>Урок 1. М1 У1. Введение в язык Python</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" alt="Python Logo" class="python-logo">
+        <img src="https://habrastorage.org/getpro/moikrug/uploads/company/100/005/653/0/logo/big_6ab1bb2fe0af80312cd60cd6591e10dc.png" alt="Python Logo" class="python-logo">
     </div>
     
     <section>
@@ -200,12 +206,13 @@ print("на языке Python!")
         <div class="task">
             <div class="task-title">Задание 1.</div>
             <div class="code-container">
-                <button class="copy-btn">Копировать</button>
-                <code>
-print('Python', 1.0, 'был выпущен в', 1994, 'году')
-print('Python 1.0 был выпущен в 1994 году')
-                </code>
-            </div>
+                <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> print('Python', 1.0, 'был выпущен в', 1994, 'году')
+                </div>
+              <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> print('Python 1.0 был выпущен в 1994 году')
+              </div>
+          </div>
         </div>
         
         <div class="task">
@@ -260,19 +267,6 @@ moneyperone = 53670
 ppl = 12
 print("Сумма зарплат сотрудников:", moneyperone*ppl)
                 </code>
-            </div>
-        </div>
-        
-        <div class="task">
-            <div class="task-title">Бонус 1.</div>
-            <div class="bonus-item">
-                <input name='test' type='checkbox' checked='checked' disabled> moneyperone = 53670
-            </div>
-            <div class="bonus-item">
-                <input name='test' type='checkbox' checked='checked' disabled> ppl = 12
-            </div>
-            <div class="bonus-item">
-                <input name='test' type='checkbox' checked='checked' disabled> print("Сумма зарплат сотрудников:", moneyperone*ppl)
             </div>
         </div>
     </section>
