@@ -1,31 +1,228 @@
-<title>Урок 1. М1 У1. Введение в язык Python</title>
-<link rel="stylesheet" href="https://brokendos.github.io/algogdz/style.css">
-<h1>Урок 1. М1 У1. Введение в язык Python</h1>
-<h2>Онбординг: первые программы</h2>
-<p><b>Задание 1.</b> Все варианты</p>
-<p><b>Задание 2.</b>
-Правило начала - Первая команда пишется в начале строки.
-Правило порядка - Команды выполняются по порядку, если они написаны одна под другой.
-Правило оформления кода - Заглавные буквы нельзя менять на строчные. Лишний знак может сломать программу.</p>
-<p><b>Бонус 1.</b>
-<input name='test' type='checkbox' style="pointer-events: none;" checked='checked'; />Исполнитель алгоритма не умеет догадываться и фантазировать
-<input name='test' type='checkbox' style="pointer-events: none;" checked='checked'; />Алгоритм — это последовательность действий для достижения цели
-<input name='test' type='checkbox' style="pointer-events: none;" checked='checked'; />Действия выполняются строго в заданном порядке</p>
-<p><b>Бонус 3.</b><code>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 1. М1 У1. Введение в язык Python</title>
+    <style>
+        :root {
+            --primary: #3776ab;
+            --secondary: #ffd43b;
+            --dark: #1e1e1e;
+            --light: #f8f9fa;
+            --success: #28a745;
+            --code-bg: #f5f5f5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        h2 {
+            color: var(--primary);
+            background-color: rgba(55, 118, 171, 0.1);
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        
+        p {
+            margin: 15px 0;
+        }
+        
+        b {
+            color: var(--primary);
+        }
+        
+        .code-container {
+            position: relative;
+            margin: 15px 0;
+        }
+        
+        code {
+            display: block;
+            background-color: #000000;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            overflow-x: auto;
+            border-left: 4px solid var(--primary);
+            margin-top: 0;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 12px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .copy-btn:hover {
+            opacity: 1;
+        }
+        
+        .copy-btn.copied {
+            background-color: var(--success);
+            opacity: 1;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+            accent-color: var(--primary);
+        }
+        
+        .task {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .task-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .task-title:before {
+            content: "▶";
+            color: var(--secondary);
+            margin-right: 10px;
+            font-size: 0.8em;
+        }
+        
+        .bonus-item {
+            margin: 8px 0;
+            padding-left: 10px;
+            border-left: 2px solid var(--secondary);
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .python-logo {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Урок 1. М1 У1. Введение в язык Python</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" alt="Python Logo" class="python-logo">
+    </div>
+    
+    <section>
+        <h2>Онбординг: первые программы</h2>
+        
+        <div class="task">
+            <div class="task-title">Задание 1.</div>
+          <p><b>Все варианты.</b></p>
+        </div>
+        
+        <div class="task">
+            <div class="task-title">Задание 2.</div>
+            <p><b>Правило начала</b> - Первая команда пишется в начале строки.</p>
+            <p><b>Правило порядка</b> - Команды выполняются по порядку, если они написаны одна под другой.</p>
+            <p><b>Правило оформления кода</b> - Заглавные буквы нельзя менять на строчные. Лишний знак может сломать программу.</p>
+        </div>
+        
+        <div class="task">
+            <div class="task-title">Бонус 1.</div>
+            <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> Исполнитель алгоритма не умеет догадываться и фантазировать
+            </div>
+            <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> Алгоритм — это последовательность действий для достижения цели
+            </div>
+            <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> Действия выполняются строго в заданном порядке
+            </div>
+        </div>
+        
+        <div class="task">
+            <div class="task-title">Бонус 3.</div>
+            <div class="code-container">
+                <button class="copy-btn">Копировать</button>
+                <code>
 print("Скоро я напишу ")
 print("первую программу ")
-print("на языке Python!")</code></p>
-<p><b>Бонус 4.</b>
-<input name='test' type='checkbox' style="pointer-events: none;" checked='checked'; />Программа печатает слова, указанные в скобках
-<input name='test' type='checkbox' style="pointer-events: none;" checked='checked'; />Данная программа выполняет 3 действия
-<input name='test' type='checkbox' style="pointer-events: none;" checked='checked'; />Слово print используется для печати слов</p>
-<h2>Онбординг: вывод данных</h2>
-<p><b>Задание 1.</b> print('Python', 1.0, 'был выпущен в', 1994, 'году')
-print('Python 1.0 был выпущен в 1994 году')</p>
-<p><b>Задание 3.</b><code>
+print("на языке Python!")
+                </code>
+            </div>
+        </div>
+        
+        <div class="task">
+            <div class="task-title">Бонус 4.</div>
+            <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> Программа печатает слова, указанные в скобках
+            </div>
+            <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> Данная программа выполняет 3 действия
+            </div>
+            <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> Слово print используется для печати слов
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Онбординг: вывод данных</h2>
+        
+        <div class="task">
+            <div class="task-title">Задание 1.</div>
+            <div class="code-container">
+                <button class="copy-btn">Копировать</button>
+                <code>
+print('Python', 1.0, 'был выпущен в', 1994, 'году')
+print('Python 1.0 был выпущен в 1994 году')
+                </code>
+            </div>
+        </div>
+        
+        <div class="task">
+            <div class="task-title">Задание 3.</div>
+            <div class="code-container">
+                <button class="copy-btn">Копировать</button>
+                <code>
 print("Создатель языка Python - Гвидо ван Россум")
-print("Последняя версия языка вышла в 2019 году")</code></p>
-<p><b>Задание 4.</b><code>
+print("Последняя версия языка вышла в 2019 году")
+                </code>
+            </div>
+        </div>
+        
+        <div class="task">
+            <div class="task-title">Задание 4.</div>
+            <div class="code-container">
+                <button class="copy-btn">Копировать</button>
+                <code>
 print("*           **********")
 print("         ***            ****")
 print("     ***                      ***")
@@ -38,27 +235,67 @@ print("  **       **            ***     **")
 print("   **         **       **       **")
 print("    **          *****        **")
 print("       **                   **")
-print("        *************")</code></p>
-<p><b>Задание 5.</b><code>
+print("        *************")
+                </code>
+            </div>
+        </div>
+        
+        <div class="task">
+            <div class="task-title">Задание 5.</div>
+            <div class="code-container">
+                <button class="copy-btn">Копировать</button>
+                <code>
 print("Hello, world!")
-</code></p>
-<p><b>Задание 6.</b><code>
+                </code>
+            </div>
+        </div>
+        
+        <div class="task">
+            <div class="task-title">Задание 6.</div>
+            <div class="code-container">
+                <button class="copy-btn">Копировать</button>
+                <code>
 moneyperone = 53670
 ppl = 12
 print("Сумма зарплат сотрудников:", moneyperone*ppl)
-</code></p>
-<p><b>Бонус 1.</b>
-<input name='test' type='checkbox' style="pointer-events: none;" checked='checked'; /> moneyperone = 53670
-ppl = 12
-print("Сумма зарплат сотрудников:", moneyperone*ppl)
-</p>
-<h2>Онбординг: доп задание</h2>
-<p><b>Задание 1.</b><code>
+                </code>
+            </div>
+        </div>
+        
+        <div class="task">
+            <div class="task-title">Бонус 1.</div>
+            <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> moneyperone = 53670
+            </div>
+            <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> ppl = 12
+            </div>
+            <div class="bonus-item">
+                <input name='test' type='checkbox' checked='checked' disabled> print("Сумма зарплат сотрудников:", moneyperone*ppl)
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h2>Онбординг: доп задание</h2>
+        
+        <div class="task">
+            <div class="task-title">Задание 1.</div>
+            <div class="code-container">
+                <button class="copy-btn">Копировать</button>
+                <code>
 hours = 6
 minutes = 42
 print('По статистике в 2019 году пользователь интернета проводил в онлайне', hours, 'часов', minutes, 'минуты ежедневно')
-</code></p>
-<p><b>Задание 2.</b><code>
+                </code>
+            </div>
+        </div>
+        
+        <div class="task">
+            <div class="task-title">Задание 2.</div>
+            <div class="code-container">
+                <button class="copy-btn">Копировать</button>
+                <code>
 number = 200711
 
 year = number//100
@@ -66,4 +303,38 @@ month = number-200700
 
 print("Месяц:", month)
 print("Год:", year)
-</code></p>
+                </code>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Добавляем обработчики для всех кнопок копирования
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const codeBlock = this.nextElementSibling;
+                    const codeText = codeBlock.textContent;
+                    
+                    // Копируем текст в буфер обмена
+                    navigator.clipboard.writeText(codeText.trim()).then(() => {
+                        // Визуальная обратная связь
+                        const originalText = this.textContent;
+                        this.textContent = 'Скопировано!';
+                        this.classList.add('copied');
+                        
+                        // Возвращаем исходный текст через 2 секунды
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.classList.remove('copied');
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Ошибка копирования: ', err);
+                        this.textContent = 'Ошибка!';
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
