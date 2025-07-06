@@ -1,0 +1,20 @@
+code {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  white-space: pre;
+}
+
+p {
+  font-family: Verdana;
+  font-size: 20px;
+  white-space: pre;
+}
+
+h1 {
+  font-family: Verdana;
+}
+
+h2 {
+  font-family: Verdana;
+}
